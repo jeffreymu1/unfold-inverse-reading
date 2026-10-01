@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unfold is an interactive design proposal for inverse reading: paced answers and short clarifications attached to the text you select.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Unfold — an inverse reading interface</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314171d'/%3E%3Cpath d='M8 8h16v3H8zm0 6h12v3H8zm0 6h8v3H8z' fill='%23d7ff63'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#page">Skip to presentation</a>
+  <header class="site-header">
+    <a class="wordmark" href="#problem" aria-label="Unfold, first page">Unfold</a>
+    <div class="header-description">Inverse reading</div>
+  </header>
+  <div class="presentation">
+    <aside class="chapter-rail" aria-label="Presentation navigation">
+      <nav id="chapters"></nav>
+    </aside>
+    <main id="page" tabindex="-1"></main>
+  </div>
+  <footer class="presentation-footer">
+    <div class="page-progress"><span id="page-number">01 / 08</span><span id="page-name">The problem</span></div>
+    <div class="footer-actions"><button id="previous-page" class="button button-quiet" type="button">Previous</button><button id="next-page" class="button button-dark" type="button">Next page</button></div>
+  </footer>
+  <div id="selection-menu" class="selection-menu" role="menu" aria-label="Selected text actions" hidden><button role="menuitem" type="button" id="ask-selection">Ask about this selection</button></div>
+  <div id="site-status" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>
